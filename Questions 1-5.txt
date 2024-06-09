@@ -1,0 +1,31 @@
+1. a) A JOIN is used to combine rows from two or more tables, based on a related column between them.
+   b) INNER JOIN is combing two tables using one same column in both tables. F.e: Products and Categories tables will be joining with the Category_id column
+   c) The LEFT JOIN keyword returns all data from the left table, and the matching data from the right table
+   Ex: A:1, 2, 3, 4   B:2, 3, 5, 6      A Left Joins B = 1,2,3,4 
+   d) The RIGHT JOIN is the same with LEFT JOIN but vice versa 
+2. The ALTER TABLE statement in SQL is used to modify the structure of an existing table. This can include adding, modifying, or deleting columns and changing other table properties
+   Adding: ALTER TABLE Members
+           ADD COLUMN email VARCHAR(100);
+   Modifying: a) ALTER TABLE Books
+              ALTER COLUMN authors TYPE Charfield;
+              b) ALTER TABLE Members
+              RENAME COLUMN first_name TO full_name;
+   Dropping: ALTER TABLE Members
+             DROP COLUMN Phone;
+3. A foreign key is a unique identifier of another table that support relationship between them.
+4. The following steps will be completed after user sent a request:
+    1.User Request: User makes a request via browser or API client.
+    2.Web Server: Receives the request and forwards it to the WSGI server.
+    3.WSGI Server: Converts the HTTP request to a WSGI request and passes it to Django.
+    4.Django Application:
+       URL Routing: Matches the request URL to a view.
+       Middleware Processing (Request): Processes the request through middleware.
+       View Handling: Processes the request in the view, interacts with the database, and renders templates if necessary.
+       Middleware Processing (Response): Processes the response through middleware.
+    5.WSGI Server: Converts the Django response to an HTTP response.
+    6.Web Server: Sends the HTTP response to the user's browser.
+    7.User's Browser: Renders the content or processes the data.
+
+
+
+5. Telegram bot ID: https://t.me/Holiday2222bot

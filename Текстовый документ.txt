@@ -1,0 +1,17 @@
+1. Find the most borrowed book in the last 6 months
+
+SELECT b.title, COUNT(br.book_id) AS borrow_count FROM "BorrowingRecords" br JOIN "Books" b ON br.book_id = b.book_id WHERE br.borrow_date >= CURRENT_DATE - INTERVAL '6 months' GROUP BY b.title ORDER BY borrow_count DESC LIMIT 1;
+
+Answer:  362.8256269592476489
+
+2. Find the member who has borrowed the most books
+
+SELECT m.name, COUNT(br.member_id) AS borrow_count FROM "BorrowingRecords" br JOIN "Members" m ON br.member_id = m.member_id GROUP BY m.name ORDER BY borrow_count DESC LIMIT 1;
+
+Answer: Focus relate page term. |            6
+
+3. Find the average borrowing duration for books
+
+SELECT AVG(return_date - borrow_date) AS average_borrow_duration FROM "BorrowingRecords" WHERE return_date IS NOT NULL;
+
+Answer:  Makayla Watson |           20
